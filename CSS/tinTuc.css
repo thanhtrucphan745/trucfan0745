@@ -1,0 +1,327 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f8f8f8;
+  }
+
+header {
+		position: sticky; /* Hoặc dùng fixed */
+		top: 0; /* Cố định ở vị trí cách trên cùng 0px */
+		z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+}
+	
+
+.navbar-brand {
+	width: 200px;
+    margin-left: 80px;
+}
+
+.navbar {
+    justify-content: space-between; /* Căn giữa ngang */	
+	background-color: #8AAEE0;   
+	height: 70px; 
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+}
+.navbar-nav {
+    margin: 0 auto; /* Căn giữa danh sách */
+    margin-left:200px;
+    padding: 0;
+	gap: 70px;
+    font-weight: 60px;
+}
+
+ 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Danh sách sản phẩm ẩn khi không hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #A4BADE;
+    width: 90px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Khi hover vào phần tử dropdown, hiển thị danh sách */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Định dạng các phần tử trong dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Thay đổi màu khi hover vào mỗi phần tử */
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+	color: #130a0a; /* Màu chữ mặc định */
+	position: relative; /* Cần để sử dụng pseudo-element */
+
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.navbar-nav .nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: -1px; /* Vị trí dưới chữ */
+	width: 0; /* Không hiển thị khi chưa hover */
+	height: 3px; /* Độ dày gạch chân */
+	background-color: #000000; /* Màu gạch chân */
+	transition: width 0.5s; /* Hiệu ứng mượt khi hover */
+	border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover::before {
+	width: 82%; /* Hiển thị gạch chân khi hover */
+}
+
+.search {
+	position: absolute;
+    right: 150px; /* Đặt thanh tìm kiếm ở bên phải */
+	background: #fff;
+	padding: 10px 20px;	
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	height: 30px; 
+	border-radius: 30px;
+	cursor: pointer; 
+	transition: 0.8s;
+	box-shadow:  4px 4px 0 rgba(255,255,255,0.3),
+				 -4px -4px 6px 0 rgba(116,125,136,0.2),
+	
+}
+
+.search:hover > .search-input {
+	width: 200px;
+}
+
+.search .search-input { 
+	background: transparent;
+	width: 0px;
+	font-weight: 500; 
+	border: none;
+	outline: none; 
+	font-size: 16px; 
+	transition: 0.8s;
+}
+
+.search .fas {
+	color: #000000;
+}
+
+.search:hover {
+	animation: anim 0.15s linear 3;
+}
+
+.user-info {
+    position: fixed; /* Đặt vị trí cố định ở góc phải */
+    right: 20px; /* Khoảng cách từ bên phải của trang */
+    display: flex; /* Hiển thị ảnh theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa avatar và giỏ hàng */
+}
+
+.avatar {
+    border-radius: 50%; /* Bo tròn hình ảnh đại diện */
+    width: 30px; /* Đặt kích thước của avatar */
+    height: 30px; /* Đặt kích thước của avatar */
+    object-fit: cover; /* Cắt ảnh sao cho vừa khung */
+}
+
+.custom-cart {
+	margin-right: 90px;
+	color: #000000;
+	font-size: 25px;
+}
+
+
+.meta {
+	font-size: 12px;
+	color: #ddd;
+  }
+  
+  /* Phần tin nổi bật */
+  .featured-news {
+	display: flex;
+	gap: 20px;
+	padding: 20px;
+  }
+  
+  .featured-main {
+	flex: 2;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+  }
+  
+  .featured-sidebar {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+  }
+  
+  .sidebar-item {
+	background: white;
+	padding: 10px;
+	border-radius: 8px;
+  }
+  
+  /* Phần tin tức gần đây */
+  .recent-news {
+	padding: 5px;
+	background: white;
+	margin-top: 5px;
+  }
+  
+  .recent-news h2 {
+	text-align: center;
+	margin-bottom: 5px;
+  }
+  
+  .news-filters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 10px;
+  }
+  
+  .filter-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+	background-color: #0056b3;
+  }
+  
+  .search-input {
+	padding: 10px 15px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 300px;
+	transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+	border-color: #007bff;
+	outline: none;
+  }
+   .hidden {
+		display: none;
+	  }
+  
+  .news-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+  }
+  
+  .news-item {
+	background: #f9f9f9;
+	padding: 20px;
+	text-align: center;
+	border-radius: 8px;
+  }
+  .news-item:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(00, 0, 0, 0.1);
+		font-size: 20;
+	  }
+  
+  .pagination {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 20px;
+  }
+
+.footer {
+	background-color: #d5dce1;
+	/* Màu nền footer */
+	padding: 20px 50px;
+
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/* Đảm bảo tương thích trên màn hình nhỏ */
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 20px;
+}
+
+.footer-column {
+	flex: 1;
+	min-width: 250px;
+	/* Đảm bảo các cột không quá nhỏ */
+	color: #333;
+	/* Màu chữ */
+}
+
+.footer-logo img {
+	width: 350px;
+	margin-left: 20px;
+}
+
+.footer p {
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 3px 100px;
+}
+
+.cart-count {
+	position: absolute;
+	top: -8px;
+	right: -10px;
+	background: red;
+	color: white;
+	font-size: 12px;
+	padding: 2px 6px;
+	border-radius: 50%;
+	font-weight: bold;
+	line-height: 1;
+	margin-right: 90px;
+	margin-top: 20px;
+	z-index: 1;
+}

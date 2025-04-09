@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dat Bike QuanTum  </title>
+    <script src="/Javascript/sanpham.js" defer></script>
+    <link rel="stylesheet" href="/CSS/chitiettungsanpham.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-expand">
+            <div>
+                <img src="/Ảnh đồ án/logo.png" alt="Logo" class="navbar-brand">
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/Trangchu.html">TRANG CHỦ</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropbtn">SẢN PHẨM</a>
+                    <div class="dropdown-content">
+                        <a href="/dibao.html">DIBAO</a>
+                        <a href="/yadea.html">YADEA</a>
+                        <a href="/vespa.html">VESPA</a>
+                        <a href="/vinfast.html">VINFAST</a>
+                        <a href="/datbike.html">DAT BIKE</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/tinTuc.html">TIN TỨC</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Lienhe.html">LIÊN HỆ</a></li>
+            </ul>
+
+            <div class="search">
+                <input type="text" name="search" placeholder="Nhập nội dung tìm kiếm..." class="search-input">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="cart-shopping">
+                <a href="/gioHang.html">
+                    <i class="fa-solid fa-cart-shopping custom-cart"></i>
+                    <span class="cart-count">0</span> <!-- Số lượng sản phẩm -->
+                </a>
+            </div>
+            <div class="user-info">
+                <a href="/Loginfull.html">
+                    <img class="avatar" src="/Ảnh đồ án/meme.jpg" alt="User Avatar">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container my-5 pt-5">
+            <div class="product-detail row mt-5" bis_skin_checked="1" style="padding: 1px;">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-10" bis_skin_checked="1">
+                    <img class="img-fluid w-100 pb-1" src="/Ảnh đồ án/quantum.jpg" id="MainImg" alt="">
+                    
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-10" bis_skin_checked="1">
+                    <h3 class="product-name">Dat Bike QuanTum </h3>
+                    <h4 class="product-price encode-regular ">
+                        <p class="product-colors-title">Giá sốc </p>
+                        <div class="product-price-number no-padding" bis_skin_checked="1">
+                            <b><span class="new-price">49,990,000 VND</span></b>
+                            <span class="product-old-price"> 52,900,000 VND</span>
+                        </div>
+                    </h4>
+                    <p style="margin-bottom:30px;">Trải nghiệm công nghệ và sắc màu</p>
+                    <h4 class="product-colors-title">Màu sắc:</h4>
+                    <div class="product-detail">
+                        <ul class="product-colors">
+                            <li data-color="FA7E61">
+                                <span style="background-color: #FA7E61;"></span>
+                        </ul>
+                    </div>
+
+                    <!-- Các sản phẩm tương ứng -->
+                    <div class="product-item-000000" data-slide-number="0"></div>
+                    <div class="product-item-868A7B" data-slide-number="1"></div>
+                    <div class="product-item-FFFFFF" data-slide-number="2"></div>
+                    <div class="product-item-9A9898" data-slide-number="3"></div>
+                    <!-- Carousel -->
+                    <div id="carousel_thumbnail" class="carousel slide">
+                        <!-- Nội dung carousel -->
+                    </div>
+
+
+
+                    <p> Còn hàng</p>
+                    <div>Số lượng <input type="number" value=""></div>
+                    <div class="product-buttons-wrapper">
+                        <div class="product-buttons" bis_skin_checked="1">
+                            <a href="#" onclick="themvaogiohang(this)"> Thêm vào giỏ hàng <div class="fa fa-shopping-cart"></div> </a>
+                        </div>
+                        <div class="product-buttons" bis_skin_checked="1">
+                            <a href="#"> Mua ngay <i class="fas fa-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <br>
+    <div class="product-info row" bis_skin_checked="1">
+        <h2 style="margin-bottom: 35px;margin-left: 50px;margin-right: 200px;">THÔNG TIN SẢN PHẨM</h2>
+        <div style="margin-bottom: 35px;margin-left: 50px;margin-right: 200px;">Xe máy điện Dat Bike Quantum - mẫu xe tay ga scooter điện cao cấp hoàn toàn mới, chính thức được thương hiệu Việt - Dat Bike cho ra mắt thị trường. Với tính đa năng và tiện dụng cao, mẫu xe điện này trang bị hàng loạt các thông số khủng như cốp xe rộng 41L, quãng đường di chuyển lên tới 270km, công suất 7000W và vận tốc có thể đạt 100km/h.</div>
+        <div class="col-lg-5 col-md-4 col-sm-10 col-xs-10 px-" style="margin-bottom: 35px;margin-left: 50px;"
+            bis_skin_checked="1">
+            <div class="product-specification" bis_skin_checked="1">
+
+                <h3 class="product-title">Thông số kỹ thuật</h3>
+                <article class="detail-content">
+                    <div id="thong-so" bis_skin_checked="1">
+                        <table style="width: 780px;" data-cke-table-faked-selection-table="">
+                            <thead>
+
+                            </thead>
+                            <tr>
+                                <th style="width: 28.2188px; text-align: center;">
+                                    <p><strong>TT</strong></p>
+                                </th>
+                                <th style="width: 259.219px; text-align: center;">
+                                    <p><strong>Nội dung</strong></p>
+                                </th>
+                                <th style="width: 460px; text-align: center;">
+                                    <p><strong>Thông số</strong></p>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">1</td>
+                                <td style="width: 259.219px;">Trọng lượng bản thân</td>
+                                <td style="width: 460px; text-align: right;">144kg</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>2</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Kích thước xe (D/R/C)</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>2010 × 710 × 1100mm</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">3</td>
+                                <td style="width: 259.219px;"><em>Chiều cao yên</em></td>
+                                <td style="width: 460px; text-align: right;">760mm</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>4</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Tải trọng</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>130Kg</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>5</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Động cơ điện, công suất&nbsp;(Max)</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>7.000W</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>6</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Bình điện&nbsp;</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>72V68 Ah</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>7</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Tôc độ tối đa</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>100km/h</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>8</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Quãng đường đi/lần sạc</p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>270km/lần sạc</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 28.2188px; text-align: center;">
+                                    <p>9</p>
+                                </td>
+                                <td style="width: 259.219px;">
+                                    <p>Thời gian sạc điện </p>
+                                </td>
+                                <td style="width: 460px; text-align: right;">
+                                    <p>4 Giờ</p>
+                                </td>
+                            </tr>
+                           
+
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 px-10" style="margin-left: 170px;" bis_skin_checked="1">
+            <div class="product-description">
+                <div class="news-label">
+                    <span class="label-holder">MÔ TẢ SẢN PHẨM</span>
+                </div>
+                <article class="detail-content" style="text-align: justify;margin-top: -10px;">
+                    <p><b>Thiết kế tổng thể cá tính, hiện đại</b></p>
+                    <p>Dat Bike Quantum là một mẫu xe máy điện mang phong cách trẻ trung, năng động và hiện đại. Xe có kích thước 2.010 x 710 x 1.110 mm, chiều cao yên 790mm, phù hợp với nhiều đối tượng người dùng. Thiết kế khung sườn cứng cáp, đầm chắc, vỏ nhựa cao cấp và tay lái thoải mái, giúp bạn cảm thấy an toàn và tự tin khi lái xe.
+                        <br> Về màu sắc, xe máy điện Dat Bike Quantum có 3 tuỳ chọn màu sắc để bạn lựa chọn theo sở thích và cá tính. Màu trắng tạo cảm giác sạch sẽ, tươi mới và trẻ trung. Màu cam là biểu tượng của sự năng động, sáng tạo và nổi bật. Màu đen thể hiện sự mạnh mẽ, sang trọng và lịch lãm.
+                        <p><b>Hệ thống LED siêu sáng, góc chiếu cực chuẩn</b></p>
+                        <br>Dat Bike Quantum được trang bị hệ thống đèn chiếu sáng full LED, bao gồm đèn pha, đèn xi-nhan, đèn hậu và đèn báo hiệu. Đèn LED có độ sáng cao, tiết kiệm điện năng và tuổi thọ lâu dài. Góc chiếu của đèn được thiết kế cực chuẩn, giúp bạn dễ dàng quan sát và nhận biết trong mọi điều kiện ánh sáng.
+            </div>
+        </div>
+    </div>
+    <div class="comment">
+        <div class="comment-header">
+            <h3> ĐÁNH GIÁ SẢN PHẨM</h3>
+            <div class="rating1">
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+            </div>
+        </div>
+        <!-- Bình luận 1 -->
+        <div class="review">
+            <p><strong>Hồ Thị Hương</strong></p>
+            <div class="rating">
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+            </div>
+            <p> Sản phẩm đẹp, phong cách</p>
+        </div>
+
+        <!-- Bình luận 2 -->
+        <div class="review">
+            <p><strong>Decao</strong></p>
+            <div class="rating">
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star filled">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+                <span class="star">
+                    <div class="fa fa-star"></div>
+                </span>
+            </div>
+            <p>Sản </p>
+        </div>
+    </div>
+    </div>
+    <div class="same-product">
+        <h4> SẢN PHẨM TƯƠNG TỰ</h4>
+        <div class="product-grid" id="product-container">
+            <div class="product-card" data-price="16990000">
+                <a href="/Chi_tiet_tung_san_pham/YADEA_OCEAN.html ">
+                    <img src="/Ảnh đồ án/Yadea_ocean( màu xanh).png" alt="">
+                </a>
+                <div class="product-info">
+                    <div class="product-name"> YADEA OCEAN</div>
+                    <div class="product-old-price"><s>18,250,000 VNĐ</s></div>
+                    <div class="product-new-price">16,990,000 VNĐ</div>
+                    <div class="bottom-section">
+                        <a href="#" class="buy-button">Mua ngay</a>
+                        <div class="sold-badge">Đã bán 69</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="22500000">
+                <a href="/Chi_tiet_tung_san_pham/YADEA_Oris.html">
+                    <img src="/Ảnh đồ án/YADEA Oris.png" alt="">
+                </a>
+                <div class="product-info">
+                    <div class="product-name"> YADEA ORIS</div>
+                    <div class="product-old-price"><s>23,990,000 VNĐ</s></div>
+                    <div class="product-new-price">22,500,000 VNĐ</div>
+                    <div class="bottom-section">
+                        <a href="#" class="buy-button">Mua ngay</a>
+                        <div class="sold-badge">Đã bán 97</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="17450000">
+                <img src="/Ảnh đồ án/YADEA Xmen Neo.png" alt="Product 3">
+                <div class="product-info">
+                    <div class="product-name"> YADEA Xmen Neo</div>
+                    <!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+                    <div class="product-new-price">17,450,000 VNĐ</div>
+                    <div class="bottom-section">
+                        <a href="#" class="buy-button">Mua ngay</a>
+                        <div class="sold-badge">Đã bán 180</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-price="21990000">
+                <img src="/Ảnh đồ án/YADEA OSSY.png" alt="Product 4">
+                <div class="product-info">
+                    <div class="product-name"> YADEA OSSY</div>
+                    <div class="product-old-price"><s>23,000,000 VNĐ</s></div>
+                    <div class="product-new-price">21,990,000 VNĐ</div>
+                    <div class="bottom-section">
+                        <a href="#" class="buy-button">Mua ngay</a>
+                        <div class="sold-badge">Đã bán 55</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Cột 1 -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/Ảnh đồ án/logo.png" alt="Scooter Speed Logo">
+                    </div>
+                    <p><strong>CÔNG TY TNHH XE ĐIỆN TIẾP ANH</strong></p>
+                    <p>Địa chỉ trụ sở chính: Số 08, Đường Thượng Trụ, TDP 9, Thị trấn Nghèn, Can Lộc, Hà Tĩnh</p>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="footer-column">
+                    <p><strong>VỀ VINFAST</strong></p>
+                    <p><strong>VỀ YAEDE</strong></p>
+                    <p><strong>VỀ DIBAO</strong></p>
+                    <p><strong>VỀ DAT BIKE</strong></p>
+                    <p><strong>VỀ VESPA</strong></p>
+                    <p><strong>TIN TỨC</strong></p>
+                    <p><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></p>
+                    <div class="social-icons">
+                        <a href="#"><img src="/https://via.placeholder.com/30x30" alt="Facebook"></a>
+                        <a href="#"><img src="/https://via.placeholder.com/30x30" alt="YouTube"></a>
+                    </div>
+                </div>
+
+                <!-- Cột 3 -->
+                <div class="footer-column">
+                    <p><strong>HOTLINE</strong></p>
+                    <p><a href="mailto:abcdeh.vn@gmail.com">abcdeh.vn@gmail.com</a></p>
+                    <p><a href="tel:0123456789">0123456789</a></p>
+                    <p><strong>LIÊN HỆ</strong></p>
+                    <p><strong>PHƯƠNG THỨC THANH TOÁN</strong></p>
+                    <div class="payment-icons">
+                        <img src="/https://via.placeholder.com/50x30" alt="Visa">
+                        <img src="/https://via.placeholder.com/50x30" alt="Internet Banking">
+                        <img src="/https://via.placeholder.com/50x30" alt="Trả góp 0%">
+                        <img src="/https://via.placeholder.com/50x30" alt="Tiền mặt">
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

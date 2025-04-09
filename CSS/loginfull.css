@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+    background: linear-gradient(135deg, 
+        #F0FAF3 0%, 
+        #A4BADE 24%, 
+        #92A6C5 49%, 
+        #B1C9EF 74%, 
+        #F0FAF3 100%);
+    background-size: cover; /* Đảm bảo gradient bao phủ toàn màn hình */
+}
+
+.navbar-brand {
+	width: 200px;
+    margin-left: 80px;
+}
+
+.navbar {
+    justify-content: space-between; /* Căn giữa ngang */
+	/* background-color: #8AAEE0;   */
+	height: 70px; 
+    top: 0; /* Đặt thanh header ở trên cùng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    z-index: 1000; /* Đảm bảo thanh navbar nằm trên các phần tử khác */
+}
+.navbar-nav {
+    margin: 0 auto; /* Căn giữa danh sách */
+    margin-left:200px;
+    padding: 0;
+	gap: 70px;
+    font-weight: 60px;
+}
+
+ 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Danh sách sản phẩm ẩn khi không hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #A4BADE;
+    width: 90px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Khi hover vào phần tử dropdown, hiển thị danh sách */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Định dạng các phần tử trong dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Thay đổi màu khi hover vào mỗi phần tử */
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+	color: #130a0a; /* Màu chữ mặc định */
+	position: relative; /* Cần để sử dụng pseudo-element */
+
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.navbar-nav .nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: -1px; /* Vị trí dưới chữ */
+	width: 0; /* Không hiển thị khi chưa hover */
+	height: 3px; /* Độ dày gạch chân */
+	background-color: #000000; /* Màu gạch chân */
+	transition: width 0.5s; /* Hiệu ứng mượt khi hover */
+	border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover::before {
+	width: 82%; /* Hiển thị gạch chân khi hover */
+}
+
+.anh {
+    position: absolute;
+    bottom: -50px;  
+    left: -440px;     
+    width: 1650px;  
+    height: 700px;
+    bottom: 0;
+}
+
+.background-text {
+    font-weight: bold;
+    font-family: 'Bungee';
+    position: absolute;
+    top: 50%;  
+    left: 40% ; 
+    transform: translate(-40%, -50%);
+    font-size: 250px;
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    text-align: center;
+    z-index: -1; 
+}
+
+.form-container {
+    position: absolute; /* Để định vị tuyệt đối */
+    top: 50%; /* Căn chỉnh theo chiều dọc */
+    right: 0; /* Đưa form về phía bên phải cùng */
+    transform: translateY(-50%); /* Căn giữa chiều dọc */
+    margin-right: 0px; /* Khoảng cách từ form tới cạnh phải màn hình */
+}
+
+
+.wrapper {
+    width: 400px;
+    min-height: 600px;
+    border-radius: 120px 0 0 120px;
+    padding: 80px 40px 10px 30px;
+    text-align: center;
+    /* border: 1px solid #071108; */
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(4px); /* Làm mờ nền phía sau */
+    background-color: rgba(0, 0, 0, 0.3); /* Làm mờ nền với màu nền đục nhẹ */
+    
+}
+
+/* Ẩn mặc định các form */
+.wrapper {
+    display: none;
+}
+
+/* Hiển thị form đang hoạt động */
+.wrapper.active {
+    display: block;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    cursor: text;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #5b5858;
+    transition: all 0.3s ease;
+}
+
+/* Khi input đang được focus hoặc có dữ liệu (không rỗng) */
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+    top: -10px; /* Đưa label lên phía trên */
+    font-size: 12px;
+    color: #292828;
+}
+
+/* Thêm thuộc tính placeholder để kiểm tra */
+.input-field input::placeholder {
+    color: transparent; /* Ẩn placeholder khi người dùng nhập */
+}
+
+.forgot label {
+    color: #ffffff;
+}
+
+.forgot a:hover {
+    color: #3005ee; /* Màu cam đậm khi hover */
+}
+
+/* Phần quên mật khẩu và checkbox */
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.forgot a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Button đăng nhập */
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #5bc0de;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #49a1c9;
+}
+
+/* Phần đăng ký */
+.register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #fcfeff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-login a {
+    font-size: 24px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-login a:hover {
+    background-color: #5bc0de;
+    transform: scale(1.1);
+}
+
+.login-form {
+    display: block; /* Hiển thị form Đăng nhập mặc định */
+}
+
+.register-form {
+    display: none; /* Ẩn form Đăng ký mặc định */
+}
+
+.info-form {
+    display: none; /* Ẩn form Thông tin mặc định */
+}
+
+/* Khi được kích hoạt */
+.active {
+    display: block !important;
+}
+
+.inactive {
+    display: none !important;
+}
+
+/* Khi có lỗi, ô nhập liệu sẽ có viền đỏ */
+input.error {
+    border: 1px solid red;
+}
+
+
+
+
+

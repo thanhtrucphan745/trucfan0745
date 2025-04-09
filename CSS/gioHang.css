@@ -1,0 +1,433 @@
+body {
+    background-color: #C6EDFF;
+}
+
+header {
+    position: sticky;
+    /* Hoặc dùng fixed */
+    top: 0;
+    /* Cố định ở vị trí cách trên cùng 0px */
+    z-index: 1000;
+    /* Đảm bảo nằm trên các phần tử khác */
+}
+
+
+.navbar-brand {
+    width: 200px;
+    margin-left: 80px;
+}
+
+.navbar {
+    justify-content: space-between;
+    /* Căn giữa ngang */
+    background-color: #8AAEE0;
+    height: 70px;
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng màn hình */
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    /* Căn giữa danh sách */
+    margin-left: 200px;
+    padding: 0;
+    gap: 70px;
+    font-weight: 60px;
+}
+
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Danh sách sản phẩm ẩn khi không hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #A4BADE;
+    width: 90px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Khi hover vào phần tử dropdown, hiển thị danh sách */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Định dạng các phần tử trong dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Thay đổi màu khi hover vào mỗi phần tử */
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #130a0a;
+    /* Màu chữ mặc định */
+    position: relative;
+    /* Cần để sử dụng pseudo-element */
+
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    /* Vị trí dưới chữ */
+    width: 0;
+    /* Không hiển thị khi chưa hover */
+    height: 3px;
+    /* Độ dày gạch chân */
+    background-color: #000000;
+    /* Màu gạch chân */
+    transition: width 0.5s;
+    /* Hiệu ứng mượt khi hover */
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 82%;
+    /* Hiển thị gạch chân khi hover */
+}
+
+.search {
+    position: absolute;
+    right: 150px;
+    /* Đặt thanh tìm kiếm ở bên phải */
+    background: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.3),
+        -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+
+}
+
+.search:hover>.search-input {
+    width: 200px;
+}
+
+.search .search-input {
+    background: transparent;
+    width: 0px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search .fas {
+    color: #000000;
+}
+
+.search:hover {
+    animation: anim 0.15s linear 3;
+}
+
+.user-info {
+    position: fixed;
+    /* Đặt vị trí cố định ở góc phải */
+    right: 20px;
+    /* Khoảng cách từ bên phải của trang */
+    display: flex;
+    /* Hiển thị ảnh theo hàng ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    gap: 10px;
+    /* Khoảng cách giữa avatar và giỏ hàng */
+}
+
+.avatar {
+    border-radius: 50%;
+    /* Bo tròn hình ảnh đại diện */
+    width: 30px;
+    /* Đặt kích thước của avatar */
+    height: 30px;
+    /* Đặt kích thước của avatar */
+    object-fit: cover;
+    /* Cắt ảnh sao cho vừa khung */
+}
+
+.custom-cart {
+    margin-right: 90px;
+    color: #000000;
+    font-size: 25px;
+}
+
+.cart-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.cart-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-image {
+    width: 100px;
+    height: auto;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.total-text {
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Styling cho checkbox */
+.product-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.select-all {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Nút Mua hàng */
+.cart-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.order-btn {
+    background-color: #0891a1;
+    color: white;
+    padding: 15px 30px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: hsl(150, 71%, 39%);
+}
+
+.footer {
+    background-color: #d5dce1;
+    /* Màu nền footer */
+    padding: 20px 50px;
+    margin-top: 100px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Đảm bảo tương thích trên màn hình nhỏ */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    /* Đảm bảo các cột không quá nhỏ */
+    color: #333;
+    /* Màu chữ */
+}
+
+.footer-logo img {
+    width: 350px;
+    margin-left: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 3px 100px;
+}
+
+
+.cart-table th,
+.cart-table td {
+    text-align: calc();
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: auto; /* Đặt chiều rộng tự động nếu không cần cố định */
+}
+
+.cart-table th:first-child,
+.cart-table td:first-child {
+    width: 20%; /* Checkbox "Chọn tất cả" */
+}
+
+input[type="checkbox"] {
+	width: 20px; /* Cố định chiều rộng checkbox */
+	height: 20px; /* Cố định chiều cao checkbox */
+	margin: 0 auto; /* Căn giữa checkbox */
+	cursor: pointer;
+	accent-color: rgb(67, 115, 182); /* Màu xanh da trời khi chọn */
+}
+
+.cart-item img {
+    object-fit: contain;
+}
+
+/* Định dạng container chứa ảnh và tên sản phẩm */
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa ảnh và tên */
+}
+
+/* Định dạng hình ảnh */
+.cart-item-image {
+    flex-shrink: 0; /* Đảm bảo kích thước ảnh không bị thu nhỏ */
+}
+
+/* Định dạng tiêu đề sản phẩm */
+.cart-item-title {
+    /* white-space: nowrap; Không cho chữ xuống dòng */
+    max-width: 150px; /* Đặt giới hạn chiều rộng */
+    text-size: 50px;
+}
+
+
+.cart-table th:nth-child(2),
+.cart-table td:nth-child(2) {
+    width: 30%; /* Sản phẩm */
+}
+
+.cart-table th:nth-child(3),
+.cart-table td:nth-child(3) {
+    width: 10%; /* Màu */
+}
+
+.cart-table th:nth-child(4),
+.cart-table td:nth-child(4) {
+    width: 15%; /* Số lượng */
+}
+
+input[type="number"] {
+	width: 60px; /* Đặt chiều rộng cố định cho ô số lượng */
+}
+
+.cart-table th:nth-child(5),
+.cart-table td:nth-child(5) {
+    width: 20%; /* Giá */
+}
+
+.cart-table th:nth-child(6),
+.cart-table td:nth-child(6) {
+    width: 15%; /* Thao tác */
+}   
+
+/* Tùy chỉnh biểu tượng thùng rác */
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FF5733;
+    /* Màu sắc của biểu tượng thùng rác */
+    font-size: 20px;
+}
+
+.remove-btn:hover {
+    color: #C0392B;
+    /* Màu sắc khi hover */
+}
+
+/* Hiệu ứng hover cho thùng rác */
+.remove-btn i {
+    transition: transform 0.2s ease-in-out;
+}
+
+.remove-btn:hover i {
+    transform: scale(1.1);
+    /* Tăng kích thước khi hover */
+}

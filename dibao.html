@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chi tiết sản phẩm</title>
+	<script src="/Javascript/trangchinh.js"></script>
+	<link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+	<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="Javascript/script.js" defer></script>
+	<link rel="stylesheet" href="CSS/chitietsanpham.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="navbar navbar-expand">
+			<div>
+				<img src="Ảnh đồ án/logo.png" alt="Logo" class="navbar-brand">
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="Trangchu.html">TRANG CHỦ</a></li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropbtn">SẢN PHẨM</a>
+					<div class="dropdown-content">
+						<a href="dibao.html">DIBAO</a>
+						<a href="yadea.html">YADEA</a>
+						<a href="vespa.html">VESPA</a>
+						<a href="vinfast.html">VINFAST</a>
+						<a href="datbike.html">DAT BIKE</a>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="tinTuc.html">TIN TỨC</a></li>
+				<li class="nav-item"><a class="nav-link" href="Lienhe.html">LIÊN HỆ</a></li>
+			</ul>
+
+			<div class="search">
+				<input type="text" name="search" placeholder="Nhập nội dung tìm kiếm..." class="search-input">
+				<a href="#"><i class="fas fa-search"></i></a>
+			</div>
+			<div class="cart-shopping">
+                <a href="/gioHang.html">
+                    <i class="fa-solid fa-cart-shopping custom-cart"></i>
+                    <span class="cart-count">0</span> <!-- Số lượng sản phẩm -->
+                </a>
+            </div>
+			<div class="user-info">
+				<a href="Loginfull.html">
+					<img class="avatar" src="Ảnh đồ án/meme.jpg" alt="User Avatar">
+				</a>
+			</div>
+		</div>
+	</header>
+	<div>
+		<img src="Ảnh đồ án/DIBAO.jpg" alt="ảnh bìa" class="anhbia">
+	</div>
+	<h1 class="tenhang">DIBAO</h1>
+	<hr>
+	<!-- Dropdown Sắp xếp -->
+	<div class="filter-buttons">
+
+		<select id="sort-order" onchange="sortProducts()">
+			<option value="default" disabled selected hidden>Sắp xếp theo</option>
+			<option value="low-to-high">Giá: Thấp đến cao</option>
+			<option value="high-to-low">Giá: Cao đến thấp</option>
+		</select>
+		<button>Mới nhất</button>
+		<button>Bán chạy</button>
+		<select id="price-range" onchange="filterProductsByPrice()">
+			<option value="default" disabled selected hidden>Giá</option>
+			<option value="10-12">10 triệu - 12 triệu</option>
+			<option value="12-14">12 triệu - 14 triệu</option>
+			<option value="14-17">14 triệu - 17 triệu</option>
+			<option value="17-20">17 triệu - 20 triệu</option>
+			<option value="20-25">20 triệu - 25 triệu</option>
+			<option value="25-30">25 triệu - 30 triệu</option>
+		</select>
+	</div>
+
+	<div class="product-grid" id="product-container">
+		<div class="product-card" data-price="18300000">
+			<a href="Chi_tiet_tung_san_pham/DIBAO_TESLAS.html">
+				<img src="Ảnh đồ án/Xe Điện Dibao Tesla S.jpg" alt="">
+			</a>
+			<div class="product-info">
+				<div class="product-name">Xe Điện Dibao Tesla S</div>
+				<div class="product-old-price"><s>20,000,000 VNĐ</s></div>
+				<div class="product-new-price">18,300,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 60</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="20690000">
+			<a href="/Chi_tiet_tung_san_pham/DIBAO_Creer_Nile.html">
+				<img src="Ảnh đồ án/Xe Máy Điện Dibao Creer Nile.png" alt="">
+			</a>
+			<div class="product-info">
+				<div class="product-name">Xe Máy Điện Dibao Creer Nile</div>
+				<div class="product-old-price"><s>21,900,000 VNĐ</s></div>
+				<div class="product-new-price">20,690,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 45</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="21990000">
+			<a href="/Chi_tiet_tung_san_pham/DIBAO_Tesla_Chic.html">
+				<img src="Ảnh đồ án/DIBAO TESLA CHIC-035.png" alt="Product 3">
+			</a>
+			<div class="product-info">
+				<div class="product-name">Xe Điện Dibao Tesla Chic</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">21,990,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 30</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="14750000">
+			<img src="Ảnh đồ án/DIBAO-Xman-Leo-017-1.png" alt="Product 4">
+			<div class="product-info">
+				<div class="product-name">Xe Điện Dibao Xman-Leo</div>
+				<div class="product-old-price"><s>16,450,000 VNĐ</s></div>
+				<div class="product-new-price">14,750,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 98</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="19990000">
+			<img src="Ảnh đồ án/DIBAO-R1-040.1.png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name">Xe Điện Dibao R1</div>
+				<div class="product-old-price"><s>22,000,000 VNĐ</s></div>
+				<div class="product-new-price">19,990,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 40</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="16500000">
+			<a href="Chi_tiet_tung_san_pham/XE ĐIỆN DIBAO Nami.html">
+				<img src="Ảnh đồ án/xe-dien-nami-dibao_011.jpg" alt="Product 6">
+			</a>
+			<div class="product-info">
+				<div class="product-name">Xe Điện Dibao Nami</div>
+				<div class="product-old-price"><s>18,000,000 VNĐ</s></div>
+				<div class="product-new-price">16,500,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 87</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="21650000">
+			<img src="Ảnh đồ án/DIBAO-Pansy S3-013.png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao Pansy S3</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">21,650,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 55</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="16450000">
+			<img src="Ảnh đồ án/xe-may-dien-dibao-butterfly.jpg" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao Butterfly</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">16,450,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 74</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="12100000">
+			<img src="Ảnh đồ án/DIBAO_M-one(màu trắng).png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao M-One</div>
+				<div class="product-old-price"><s>14,300,000 VNĐ</s></div>
+				<div class="product-new-price">12,100,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 49</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="20790000">
+			<img src="Ảnh đồ án/DIBAO-gogo-s5(màu đen).jpg" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao Gogo S5</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">20,790,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 39</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="21450000">
+			<img src="Ảnh đồ án/DIBAO_Gogo Moon (màu trắng).png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao Gogo Moon</div>
+				<div class="product-old-price"><s>23,000,000 VNĐ</s></div>
+				<div class="product-new-price">21,450,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 46</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="18500000">
+			<img src="Ảnh đồ án/DIBAO_PansyS.png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> Xe Điện Dibao Pansy S</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">18,500,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 61</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-container">
+			<!-- Cột 1 -->
+			<div class="footer-column">
+				<div class="footer-logo">
+					<img src="Ảnh đồ án/logo.png" alt="Scooter Speed Logo">
+				</div>
+				<p><strong>CÔNG TY TNHH XE ĐIỆN TIẾP ANH</strong></p>
+				<p>Địa chỉ trụ sở chính: Số 08, Đường Thượng Trụ, TDP 9, Thị trấn Nghèn, Can Lộc, Hà Tĩnh</p>
+			</div>
+
+			<!-- Cột 2 -->
+			<div class="footer-column">
+				<p><strong>VỀ VINFAST</strong></p>
+				<p><strong>VỀ YAEDE</strong></p>
+				<p><strong>VỀ DIBAO</strong></p>
+				<p><strong>VỀ DAT BIKE</strong></p>
+				<p><strong>VỀ VESPA</strong></p>
+				<p><strong>TIN TỨC</strong></p>
+				<p><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></p>
+				<div class="social-icons">
+					<a href="#"><img src="https://via.placeholder.com/30x30" alt="Facebook"></a>
+					<a href="#"><img src="https://via.placeholder.com/30x30" alt="YouTube"></a>
+				</div>
+			</div>
+
+			<!-- Cột 3 -->
+			<div class="footer-column">
+				<p><strong>HOTLINE</strong></p>
+				<p><a href="mailto:abcdeh.vn@gmail.com">abcdeh.vn@gmail.com</a></p>
+				<p><a href="tel:0123456789">0123456789</a></p>
+				<p><strong>LIÊN HỆ</strong></p>
+				<p><strong>PHƯƠNG THỨC THANH TOÁN</strong></p>
+				<div class="payment-icons">
+					<img src="https://via.placeholder.com/50x30" alt="Visa">
+					<img src="https://via.placeholder.com/50x30" alt="Internet Banking">
+					<img src="https://via.placeholder.com/50x30" alt="Trả góp 0%">
+					<img src="https://via.placeholder.com/50x30" alt="Tiền mặt">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

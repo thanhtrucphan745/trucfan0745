@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chi tiết sản phẩm</title>
+	<script src="/Javascript/trangchinh.js"></script>
+	<link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+	<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="Javascript/script.js" defer></script>
+	<link rel="stylesheet" href="CSS/chitietsanpham.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="navbar navbar-expand">
+			<div>
+				<img src="Ảnh đồ án/logo.png" alt="Logo" class="navbar-brand">
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="Trangchu.html">TRANG CHỦ</a></li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropbtn">SẢN PHẨM</a>
+					<div class="dropdown-content">
+						<a href="dibao.html">DIBAO</a>
+						<a href="YADEA.html">YADEA</a>
+						<a href="VESPA.html">VESPA</a>
+						<a href="vinfast.html">VINFAST</a>
+						<a href="datbike.html">DAT BIKE</a>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="tinTuc.html">TIN TỨC</a></li>
+				<li class="nav-item"><a class="nav-link" href="Lienhe.html">LIÊN HỆ</a></li>
+			</ul>
+
+			<div class="search">
+				<input type="text" name="search" placeholder="Nhập nội dung tìm kiếm..." class="search-input">
+				<a href="#"><i class="fas fa-search"></i></a>
+			</div>
+			<div class="cart-shopping">
+                <a href="/gioHang.html">
+                    <i class="fa-solid fa-cart-shopping custom-cart"></i>
+                    <span class="cart-count">0</span> <!-- Số lượng sản phẩm -->
+                </a>
+            </div>
+			<div class="user-info">
+				<a href="Loginfull.html">
+					<img class="avatar" src="Ảnh đồ án/meme.jpg" alt="User Avatar">
+				</a>
+			</div>
+		</div>
+	</header>
+	<div>
+		<img src="https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/466932385_540319008792725_3507608927886124494_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=v6FKJb3K2PIQ7kNvgG0ICWI&_nc_oc=AdiigGB0BS2sAqNTsGTHCHabeY1Dls_PxCNKDx4jf9YalhJzrbPBkGo27X894NvMSTA&_nc_zt=23&_nc_ht=scontent.fhan4-3.fna&_nc_gid=AewRnyYl1_3wvJBcCka1KSo&oh=00_AYCkNrvzBgg3KRD_6ZLRn8Vf3sogks4dtq30kGxImZUZgA&oe=67677E6B" alt="ảnh bìa" class="anhbia">
+	</div>
+	<h1 class="tenhang">VESPA</h1>
+	<hr>
+	<!-- Dropdown Sắp xếp -->
+	<div class="filter-buttons">
+
+		<select id="sort-order" onchange="sortProducts()">
+			<option value="default" disabled selected hidden>Sắp xếp theo</option>
+			<option value="low-to-high">Giá: Thấp đến cao</option>
+			<option value="high-to-low">Giá: Cao đến thấp</option>
+		</select>
+		<button>Mới nhất</button>
+		<button>Bán chạy</button>
+		<select id="price-range" onchange="filterProductsByPrice()">
+			<option value="default" disabled selected hidden>Giá</option>
+			<option value="10-12">10 triệu - 12 triệu</option>
+			<option value="12-14">12 triệu - 14 triệu</option>
+			<option value="14-17">14 triệu - 17 triệu</option>
+			<option value="17-20">17 triệu - 20 triệu</option>
+			<option value="20-25">20 triệu - 25 triệu</option>
+			<option value="25-30">25 triệu - 30 triệu</option>
+		</select>
+	</div>
+
+	<div class="product-grid" id="product-container">
+		<div class="product-card" data-price="18450000">
+			<img src="Ảnh đồ án/Vespa trắng.webp" alt="">
+			<div class="product-info">
+				<div class="product-name">ESPERO VESPA </div>
+				<div class="product-old-price"><s>20,900,000 VNĐ</s></div>
+				<div class="product-new-price">18,450,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 75</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="18300000">
+			<img src="Ảnh đồ án/xe-may-dien-vespa-canely-do.webp" alt="">
+			<div class="product-info">
+				<div class="product-name"> VESPA CANELY</div>
+				<div class="product-old-price"><s>20,500,000 VNĐ</s></div>
+				<div class="product-new-price">18,300,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 86</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="19900000">
+			<img src="Ảnh đồ án/xe-may-dien-halim-vespa-sv-xam-dior.webp" alt="Product 3">
+			<div class="product-info">
+				<div class="product-name">HALIM VESPA SV</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">19,900,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 55</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="16000000">
+			<img src="Ảnh đồ án/Xe máy điện Prima Vera S đèn kim cương.png" alt="Product 4">
+			<div class="product-info">
+				<div class="product-name">PRIMA VERA S</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">16,000,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 99</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="17450000">
+			<img src="Ảnh đồ án/XE ĐIỆN VESPA ESPERO CLASSIC.webp" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> VESPA ESPERO CLASSIC</div>
+				<div class="product-old-price"><s>19,400,000 VNĐ</s></div>
+				<div class="product-new-price">17,450,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 69</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="18290000">
+			<img src="Ảnh đồ án/tải xuống (3).jpg" alt="Product 6">
+			<div class="product-info">
+				<div class="product-name"> VESPA GTS 300</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">18,290,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 37</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="15990000">
+			<img src="Ảnh đồ án/Xe máy điện Nijia Vespa Verda.webp" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> NIJIA VESPA VERDA</div>
+				<div class="product-old-price"><s>17,500,000 VNĐ</s></div>
+				<div class="product-new-price">15,990,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 51</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="19650000">
+			<img src="Ảnh đồ án/370x240-valrios-1.png" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> VESPA VALRIO</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">19,650,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 29</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="product-card" data-price="18290000">
+			<img src="Ảnh đồ án/xe-may-dien-vespa-vera-xam (1).webp" alt="Product 5">
+			<div class="product-info">
+				<div class="product-name"> VESPA GAD</div>
+				<!-- <div class="product-old-price"><s>22,000,000 VNĐ</s></div> -->
+				<div class="product-new-price">18,290,000 VNĐ</div>
+				<div class="bottom-section">
+					<a href="#" class="buy-button">Mua ngay</a>
+					<div class="sold-badge">Đã bán 47</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-container">
+			<!-- Cột 1 -->
+			<div class="footer-column">
+				<div class="footer-logo">
+					<img src="Ảnh đồ án/logo.png" alt="Scooter Speed Logo">
+				</div>
+				<p><strong>CÔNG TY TNHH XE ĐIỆN TIẾP ANH</strong></p>
+				<p>Địa chỉ trụ sở chính: Số 08, Đường Thượng Trụ, TDP 9, Thị trấn Nghèn, Can Lộc, Hà Tĩnh</p>
+			</div>
+
+			<!-- Cột 2 -->
+			<div class="footer-column">
+				<p><strong>VỀ VINFAST</strong></p>
+				<p><strong>VỀ YAEDE</strong></p>
+				<p><strong>VỀ DIBAO</strong></p>
+				<p><strong>VỀ DAT BIKE</strong></p>
+				<p><strong>VỀ VESPA</strong></p>
+				<p><strong>TIN TỨC</strong></p>
+				<p><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></p>
+				<div class="social-icons">
+					<a href="#"><img src="https://via.placeholder.com/30x30" alt="Facebook"></a>
+					<a href="#"><img src="https://via.placeholder.com/30x30" alt="YouTube"></a>
+				</div>
+			</div>
+
+			<!-- Cột 3 -->
+			<div class="footer-column">
+				<p><strong>HOTLINE</strong></p>
+				<p><a href="mailto:abcdeh.vn@gmail.com">abcdeh.vn@gmail.com</a></p>
+				<p><a href="tel:0123456789">0123456789</a></p>
+				<p><strong>LIÊN HỆ</strong></p>
+				<p><strong>PHƯƠNG THỨC THANH TOÁN</strong></p>
+				<div class="payment-icons">
+					<img src="https://via.placeholder.com/50x30" alt="Visa">
+					<img src="https://via.placeholder.com/50x30" alt="Internet Banking">
+					<img src="https://via.placeholder.com/50x30" alt="Trả góp 0%">
+					<img src="https://via.placeholder.com/50x30" alt="Tiền mặt">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh toán</title>
+    <link rel="stylesheet" href="/CSS/thanhToan.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/Javascript/trangchinh.js"></script>
+    <script src="/Javascript/thanhToan.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: #C6EDFF;">
+    <header>
+        <div class="navbar navbar-expand">
+            <div>
+                <img src="Ảnh đồ án/logo.png" alt="Logo" class="navbar-brand">
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="Trangchu.html">TRANG CHỦ</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropbtn">SẢN PHẨM</a>
+                    <div class="dropdown-content">
+                        <a href="dibao.html">DIBAO</a>
+                        <a href="YADEA.html">YADEA</a>
+                        <a href="VESPA.html">VESPA</a>
+                        <a href="VINFAST.html">VINFAST</a>
+                        <a href="DATBIKE.html">DAT BIKE</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="tinTuc.html">TIN TỨC</a></li>
+                <li class="nav-item"><a class="nav-link" href="Lienhe.html">LIÊN HỆ</a></li>
+            </ul>
+
+            <div class="search">
+                <input type="text" name="search" placeholder="Nhập nội dung tìm kiếm..." class="search-input">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="cart-shopping">
+                <a href="gioHang.html">
+                    <i class="fa-solid fa-cart-shopping custom-cart"></i>
+                </a>
+            </div>
+            <div class="user-info">
+                <a href="Loginfull.html">
+                    <img class="avatar" src="Ảnh đồ án/meme.jpg" alt="User Avatar">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-container">
+        <h2>Thanh toán</h2>
+        <div><strong>Địa chỉ:</strong></div>
+        <div class="address">
+            <p> 123 Nguyễn Văn Cừ, Q.1, TP.HCM</p>
+        </div>
+        <!-- Bảng sản phẩm -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Màu sắc</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                </tr>
+            </tfoot>
+        </table>
+        <div class="voucher">
+            <label for="voucher">Voucher:</label>
+            <input type="text" id="address" placeholder="Nhập mã voucher...">
+        </div>
+        <div class="payment-method" style="display: flex;">
+            <h4>Phương thức thanh toán:</h4>
+            <button id="payment-button-1">Thẻ tín dụng</button>
+            <button id="payment-button-2">Thanh toán khi nhận hàng</button>
+            <button id="payment-button-3">MoMo</button>
+            <button id="payment-button-4">ZaloPay</button>
+        </div>
+        <div class="summary">
+            <table>
+            </table>
+        </div>
+
+   <!-- Nút đặt hàng -->
+<button id="order-btn" class="order-button">Mua hàng</button>
+
+
+
+
+</div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Cột 1 -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="Ảnh đồ án/logo.png" alt="Scooter Speed Logo">
+                </div>
+                <p><strong>CÔNG TY TNHH XE ĐIỆN TIẾP ANH</strong></p>
+                <p>Địa chỉ trụ sở chính: Số 08, Đường Thượng Trụ, TDP 9, Thị trấn Nghèn, Can Lộc, Hà Tĩnh</p>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="footer-column">
+                <p><strong>VỀ VINFAST</strong></p>
+                <p><strong>VỀ YAEDE</strong></p>
+                <p><strong>VỀ DIBAO</strong></p>
+                <p><strong>VỀ DAT BIKE</strong></p>
+                <p><strong>VỀ VESPA</strong></p>
+                <p><strong>TIN TỨC</strong></p>
+                <p><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="Facebook"></a>
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="YouTube"></a>
+                </div>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="footer-column">
+                <p><strong>HOTLINE</strong></p>
+                <p><a href="mailto:abcdeh.vn@gmail.com">abcdeh.vn@gmail.com</a></p>
+                <p><a href="tel:0123456789">0123456789</a></p>
+                <p><strong>LIÊN HỆ</strong></p>
+                <p><strong>PHƯƠNG THỨC THANH TOÁN</strong></p>
+                <div class="payment-icons">
+                    <img src="https://via.placeholder.com/50x30" alt="Visa">
+                    <img src="https://via.placeholder.com/50x30" alt="Internet Banking">
+                    <img src="https://via.placeholder.com/50x30" alt="Trả góp 0%">
+                    <img src="https://via.placeholder.com/50x30" alt="Tiền mặt">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

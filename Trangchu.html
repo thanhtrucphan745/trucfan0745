@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trang chủ</title>
+	<script src="/Javascript/trangchinh.js"></script>
+	<link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+	<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="CSS/Trangchu.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+	<header>
+		<div class="navbar navbar-expand">
+			<div>
+				<img src="Ảnh đồ án/logo.png" alt="Logo" class="navbar-brand">
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="Trangchu.html">TRANG CHỦ</a></li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropbtn">SẢN PHẨM</a>
+					<div class="dropdown-content">
+						<a href="dibao.html">DIBAO</a>
+						<a href="yadea.html">YADEA</a>
+						<a href="vespa.html">VESPA</a>
+						<a href="vinfast.html">VINFAST</a>
+						<a href="datbike.html">DAT BIKE</a>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="tinTuc.html">TIN TỨC</a></li>
+				<li class="nav-item"><a class="nav-link" href="Lienhe.html">LIÊN HỆ</a></li>
+			</ul>
+
+			<div class="search">
+				<input type="text" name="search" placeholder="Nhập nội dung tìm kiếm..." class="search-input">
+				<a href="#"><i class="fas fa-search"></i></a>
+			</div>
+			<div class="cart-shopping">
+                <a href="/gioHang.html">
+                    <i class="fa-solid fa-cart-shopping custom-cart"></i>
+                    <span class="cart-count">0</span> <!-- Số lượng sản phẩm -->
+                </a>
+            </div>
+			<div class="user-info">
+				<a href="Loginfull.html">
+					<img class="avatar" src="Ảnh đồ án/meme.jpg" alt="User Avatar">
+				</a>
+			</div>
+		</div>
+	</header>
+	<div>
+		<img src="Ảnh đồ án/Anhtrangchu.png" alt="Sự kiện mới" class="full-width-image">
+		<section class="py-5">
+			<div class="container">
+				<h2 class="text-center fw-bold mb-4">SẢN PHẨM NỔI BẬT</h2>
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="box">
+							<img src="Ảnh đồ án/XedienDiBAO.png" class="img-fluid mb-3" alt="Xe Đạp Điện Dibao M-One">
+							<h5>Xe Đạp Điện Dibao M-One</h5>
+							<p><del style="color:red">22,490,000 VNĐ</del> 19,990,000 VNĐ</p>
+
+							<button class="btn btn-primary ">Mua Ngay</button>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="box">
+							<img src="Ảnh đồ án/XeMayDienPansyS3.png" class="img-fluid mb-3" alt="Xe Máy Điện Pansy S3">
+							<h5>Xe Máy Điện Pansy S3</h5>
+							<p>19,990,000 VNĐ</p>
+							<button class="btn btn-primary">Mua Ngay</button>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="box">
+							<img src="Ảnh đồ án/anhtrangchu3.png" class="img-fluid mb-3" alt="Yadea G5 Z">
+							<h5>Yadea G5 Z</h5>
+							<p>21,990,000 VNĐ</p>
+							<button class="btn btn-primary">Mua Ngay</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- <img src="Ảnh đồ án/DIBAO.jpg" alt="Sự kiện mới" class="full-width-image"> -->
+		<!-- Bắt đầu phần carousel (trình chiếu ảnh) -->
+		<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+			<!-- Phần hiển thị các chấm nhỏ (dots) để chọn slide -->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
+					aria-label="Slide 4"></button>
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"
+					aria-label="Slide 5"></button>
+			</div>
+
+			<!-- Phần hiển thị các slide (hình ảnh) -->
+			<div class="carousel-inner">
+				<!-- Slide 1 (hiện đầu tiên và được kích hoạt) -->
+				<div class="carousel-item active" data-bs-interval="2000">
+					<img src="Ảnh đồ án/DIBAO.jpg" class="d-block w-100" alt="Slide 1">
+				</div>
+				<!-- Slide 2 -->
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="Ảnh đồ án/yadea-anhbia.webp" class="d-block w-100" alt="Slide 2">
+				</div>
+				<!-- Slide 3 -->
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/466932385_540319008792725_3507608927886124494_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=v6FKJb3K2PIQ7kNvgG0ICWI&_nc_oc=AdiigGB0BS2sAqNTsGTHCHabeY1Dls_PxCNKDx4jf9YalhJzrbPBkGo27X894NvMSTA&_nc_zt=23&_nc_ht=scontent.fhan4-3.fna&_nc_gid=AewRnyYl1_3wvJBcCka1KSo&oh=00_AYCkNrvzBgg3KRD_6ZLRn8Vf3sogks4dtq30kGxImZUZgA&oe=67677E6B"
+						class="d-block w-100" alt="Slide 3">
+				</div>
+				<!-- Slide 4 -->
+				<div class="carousel-item" data-bs-interval="100">
+					<img src="Ảnh đồ án/Anhtrangchu2.png" class="d-block w-100" alt="Slide 4">
+				</div>
+				<!-- Slide 5 -->
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="Ảnh đồ án/datbike.webp" class="d-block w-100" alt="Slide 5">
+				</div>
+			</div>
+
+			<!-- Nút điều hướng (trước và sau) -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Trước</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Sau</span>
+			</button>
+		</div>
+		<!-- Kết thúc phần carousel -->
+
+		<hr>
+		<div class="gocthacmac">
+			<div class="container">
+				<h2 class="fw-bold">GÓC THẮC MẮC</h2>
+	
+				<div class="row">
+	
+					<div class="col-md-2 mb-3">
+						<img src="Ảnh đồ án/loi-ich-cua-xe-may-dien-1.webp" class="img-fluid mb-2" alt="Bảo hiểm xe điện"
+							style="height: 267px;">
+						<p>Đi xe điện có cần phải mua bảo hiểm xe không? Quyền lợi khi mua bảo hiểm là gì?</p>
+					</div>
+	
+					<div class="col-md-4 mb-3">
+						<img src="Ảnh đồ án/nguyennhan.webp" class="img-fluid mb-30" style="align: center"
+							alt="Nguyên nhân xe điện không đi được">
+						<p>Nguyên nhân khiến xe lên điện nhưng không đi được.</p>
+					</div>
+	
+					<div class="col-md-4 mb-3">
+						<img src="Ảnh đồ án/xe-may-dien-vespa-espero-diamond-pro-202330012.jpg" class="img-fluid mb-30"
+							alt="Cách bảo dưỡng xe điện">
+						<p>Ghi nhớ ngay những cách bảo dưỡng xe điện này.</p>
+					</div>
+	
+					<div class="col-md-4 mb-3">
+						<img src="Ảnh đồ án/review-xe-may-dien-yadea-ossy-webuy-genk-fal02350-17189938206942041609950.webp"
+							class="img-fluid mb-2" alt="Xe điện có đi xa được không?" height="300">
+						<p>Xe điện có đi xa được không? Thắc mắc không của riêng ai.</p>
+					</div>
+	
+					<div class="col-md-4 mb-3">
+						<img src="Ảnh đồ án/yadea-ossy-xe.jpg" class="img-fluid mb-2"
+							alt="Mua xe điện phong cách" height="300">
+						<p>Tầm giá 20 triệu thì mua xe điện gì cho “phong cách”.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		<div class="text-center">
+			<a href="#" class="text-primary"></a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="row">
+			<div class="col">
+				<div class="box">
+					<img src="Ảnh đồ án/logo.png" alt="">
+					<p><B>CÔNG TY TNHH XE ĐIỆN TIỆP ANH</B></p>
+					<p><b>Địa chỉ trụ sở chính:</b> Số 08, Đường Thượng Trụ, TDP 9, Thị trấn Nghèn, Can Lộc, Hà Tĩnh
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<p><a href=""><b>VỀ VINFAST</b></a></br>
+						<a href=""><b>VỀ YAEDE</b></a></br>
+						<a href=""><b>VỀ DIBAO</b></a></br>
+						<a href=""><b>VỀ DAT BIKE</b></a></br>
+						<a href=""><b>VỀ VESPA</b></a></br>
+						<a href=""><b>TIN TỨC</b></a></br>
+						<a href=""><b>KẾT NỐI VỚI CHÚNG TÔI</b></a>
+					</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="box">
+					<p>HOTLINE </br>
+						<a href="">abcdeh.vn@gmail.com</a></br>
+						<a href="">0123456789</a>
+					</p>
+					<p><a href="">LIÊN HỆ</a></p>
+					<p><a href="">PHƯƠNG THỨC THANH TOÁN</a></p>
+				</div>
+			</div>
+		</div>
+	</div> 	
+</body>
+
+</html>

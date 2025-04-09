@@ -1,0 +1,284 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+		position: sticky; /* Hoặc dùng fixed */
+		top: 0; /* Cố định ở vị trí cách trên cùng 0px */
+		z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+}
+	
+
+.navbar-brand {
+	width: 200px;
+    margin-left: 80px;
+}
+
+.navbar {
+    justify-content: space-between; /* Căn giữa ngang */	
+	background-color: #8AAEE0;   
+	height: 70px; 
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+}
+.navbar-nav {
+    margin: 0 auto; /* Căn giữa danh sách */
+    margin-left:200px;
+    padding: 0;
+	gap: 70px;
+    font-weight: 60px;
+}
+
+ 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Danh sách sản phẩm ẩn khi không hover */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #A4BADE;
+    width: 90px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Khi hover vào phần tử dropdown, hiển thị danh sách */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Định dạng các phần tử trong dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Thay đổi màu khi hover vào mỗi phần tử */
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+	color: #130a0a; /* Màu chữ mặc định */
+	position: relative; /* Cần để sử dụng pseudo-element */
+
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.navbar-nav .nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: -1px; /* Vị trí dưới chữ */
+	width: 0; /* Không hiển thị khi chưa hover */
+	height: 3px; /* Độ dày gạch chân */
+	background-color: #000000; /* Màu gạch chân */
+	transition: width 0.5s; /* Hiệu ứng mượt khi hover */
+	border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover::before {
+	width: 82%; /* Hiển thị gạch chân khi hover */
+}
+
+.search {
+	position: absolute;
+    right: 150px; /* Đặt thanh tìm kiếm ở bên phải */
+	background: #fff;
+	padding: 10px 20px;	
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	height: 30px; 
+	border-radius: 30px;
+	cursor: pointer; 
+	transition: 0.8s;
+	box-shadow:  4px 4px 0 rgba(255,255,255,0.3),
+				 -4px -4px 6px 0 rgba(116,125,136,0.2),
+	
+}
+
+.search:hover > .search-input {
+	width: 200px;
+}
+
+.search .search-input { 
+	background: transparent;
+	width: 0px;
+	font-weight: 500; 
+	border: none;
+	outline: none; 
+	font-size: 16px; 
+	transition: 0.8s;
+}
+
+.search .fas {
+	color: #000000;
+}
+
+.search:hover {
+	animation: anim 0.15s linear 3;
+}
+
+.user-info {
+    position: fixed; /* Đặt vị trí cố định ở góc phải */
+    right: 20px; /* Khoảng cách từ bên phải của trang */
+    display: flex; /* Hiển thị ảnh theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa avatar và giỏ hàng */
+}
+
+.avatar {
+    border-radius: 50%; /* Bo tròn hình ảnh đại diện */
+    width: 30px; /* Đặt kích thước của avatar */
+    height: 30px; /* Đặt kích thước của avatar */
+    object-fit: cover; /* Cắt ảnh sao cho vừa khung */
+}
+
+.custom-cart {
+	margin-right: 90px;
+	color: #000000;
+	font-size: 25px;
+}
+
+.cart-count {
+	position: absolute;
+	top: -8px;
+	right: -10px;
+	background: red;
+	color: white;
+	font-size: 12px;
+	padding: 2px 6px;
+	border-radius: 50%;
+	font-weight: bold;
+	line-height: 1;
+	margin-right: 90px;
+	margin-top: 20px;
+	z-index: 1;
+}
+
+.full-width-image {
+	margin-top: 50px;
+}
+
+.full-width-image{
+	width: 100%; 
+	height: auto; 
+	display: block; 
+  }
+
+ 
+.carousel-item img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của carousel */
+    height: 500px; /* Cố định chiều cao của ảnh */
+    object-fit: contain; /* Đảm bảo ảnh không bị méo, giữ tỷ lệ và cắt bớt nếu cần */
+}
+
+
+.container .row .box {
+border: 1px solid #717070;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+background-color: #ffffff; 
+width: 200px;
+height: 400px;
+margin-left: 50px;
+}
+
+.gocthacmac .container {
+	padding: 30px;
+}
+
+.gocthacmac h2 {
+	
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.gocthacmac .row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; 
+	justify-content: center; 
+}
+
+.gocthacmac .col-md-2, .col-md-4 {
+	padding: 0 10px; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.gocthacmac .img-fluid {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	max-height: 300px;
+	object-fit: cover; 
+}
+
+.gocthacmac .img-fluid:hover {
+	transform: scale(1.05);
+}
+
+.gocthacmac p {
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	padding: 10px 0;
+	font-weight: 500;
+}
+.gocthacmac p:hover {
+	transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+	.col-md-2, .col-md-4 {
+		flex: 1 0 100%; 
+	}
+}
+
+.footer {
+	background-color: #d9d9d9;
+	justify-content: center;
+}
+
+.footer .row {
+	justify-content: center;
+}
+
+.footer .row .box {
+    min-height: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+img {
+    width: 300px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.footer .row .col {
+	margin-top: 35px;
+	margin-left: 200px;
+}
+
+
